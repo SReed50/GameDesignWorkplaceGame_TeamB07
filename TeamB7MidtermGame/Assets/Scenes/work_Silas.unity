@@ -961,7 +961,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Build Menu
+  m_Text: Build Menu [b]
 --- !u!222 &1204517777
 CanvasRenderer:
   m_ObjectHideFlags: 0

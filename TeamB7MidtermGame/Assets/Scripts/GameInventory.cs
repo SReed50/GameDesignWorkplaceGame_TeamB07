@@ -84,12 +84,7 @@ public class GameInventory : MonoBehaviour
         UpdateNailsText();
         UpdateWoodText();
         UpdateMetalText();
-
-        // Update build button status
-        checkHut();
-        checkShed();
-        checkHouse();
-        checkFort();
+        // only here temporarily until we have a way to pick up an object
     }
 
     public void ToggleBuildMenu(){
@@ -99,6 +94,11 @@ public class GameInventory : MonoBehaviour
             menuBuild.SetActive(false);
         } else {
             menuBuild.SetActive(true);
+
+            // Set text vars
+            UpdateNailsText();
+            UpdateWoodText();
+            UpdateMetalText();
         }
     }
 
@@ -162,6 +162,12 @@ public class GameInventory : MonoBehaviour
             fortNailsComplete = false;
             fortNails.color = Color.red;
         }
+
+        // Update build button status
+        checkHut();
+        checkShed();
+        checkHouse();
+        checkFort();
     }
 
     public void CheckWood() {
@@ -196,6 +202,12 @@ public class GameInventory : MonoBehaviour
             fortWoodComplete = false;
             fortWood.color = Color.red;
         }
+
+        // Update build button status
+        checkHut();
+        checkShed();
+        checkHouse();
+        checkFort();
     }
 
     public void CheckMetal() {
@@ -230,6 +242,12 @@ public class GameInventory : MonoBehaviour
             fortMetalComplete = false;
             fortMetal.color = Color.red;
         }
+
+        // Update build button status
+        checkHut();
+        checkShed();
+        checkHouse();
+        checkFort();
     }
 
     // check if enough materials to build each structure
@@ -269,32 +287,56 @@ public class GameInventory : MonoBehaviour
     public void BuildHut(){
         Debug.Log("I built a hut!");
         //actual hut visibility goes here
+
         nailsHave -= hutNailsNeed;
         woodHave -= hutWoodNeed;
         metalHave -= hutMetalNeed;
+
+        // Set text vars
+        UpdateNailsText();
+        UpdateWoodText();
+        UpdateMetalText();
     }
 
     public void BuildShed(){
         Debug.Log("I built a shed!");
         //actual hut visibility goes here
+
         nailsHave -= shedNailsNeed;
         woodHave -= shedWoodNeed;
         metalHave -= shedMetalNeed;
+
+        // Set text vars
+        UpdateNailsText();
+        UpdateWoodText();
+        UpdateMetalText();
     }
 
     public void BuildHouse(){
         Debug.Log("I built a house!");
         //actual hut visibility goes here
+
         nailsHave -= houseNailsNeed;
         woodHave -= houseWoodNeed;
         metalHave -= houseMetalNeed;
+
+        // Set text vars
+        UpdateNailsText();
+        UpdateWoodText();
+        UpdateMetalText();
     }
 
     public void BuildFort(){
         Debug.Log("I built a fort!");
         //actual hut visibility goes here
+
         nailsHave -= fortNailsNeed;
         woodHave -= fortWoodNeed;
         metalHave -= fortMetalNeed;
+
+        // Set text vars
+        UpdateNailsText();
+        UpdateWoodText();
+        UpdateMetalText();
     }
 }
