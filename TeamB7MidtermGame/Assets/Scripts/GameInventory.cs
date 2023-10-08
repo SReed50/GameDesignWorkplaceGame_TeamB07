@@ -10,17 +10,17 @@ public class GameInventory : MonoBehaviour
     public static bool menuBuildIsOpen = false;
     
 
-    //Hut variables:
+    // Hut variables:
     public GameObject buildHutButton;
-    public Text hutItem1nums;
-    public Text hutItem2nums;
-    public Text hutItem3nums;
-    public int hutItem1need = 2;
-    public int hutItem2need = 2;
-    public int hutItem3need = 1;
-    private bool hutItem1complete = false;
-    private bool hutItem2complete = false;
-    private bool hutItem3complete = false;
+    public Text hutNails;
+    public Text hutWood;
+    public Text hutMetal;
+    public int hutNailsneed = 4;
+    public int hutWoodneed = 6;
+    public int hutMetalneed = 0;
+    private bool hutNailscomplete = false;
+    private bool hutWoodcomplete = false;
+    private bool hutMetalcomplete = false;
 
 
 
@@ -43,7 +43,7 @@ public class GameInventory : MonoBehaviour
 
 
 
-        if (hutItem1complete && hutItem2complete && hutItem3complete){
+        if (hutNailscomplete && hutWoodcomplete && hutMetalcomplete){
             buildHutButton.SetActive(true);
         } else {
             buildHutButton.SetActive(false);
