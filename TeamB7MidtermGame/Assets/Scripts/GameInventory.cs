@@ -81,27 +81,17 @@ public class GameInventory : MonoBehaviour
         }
 
         // Set text vars
-        hutNails.text = nailsHave + " / " + hutNailsNeed;
-        hutWood.text = woodHave + " / " + hutWoodNeed;
-        hutMetal.text = metalHave + " / " + hutMetalNeed;
-
-        shedNails.text = nailsHave + " / " + shedNailsNeed;
-        shedWood.text = woodHave + " / " + shedWoodNeed;
-        shedMetal.text = metalHave + " / " + shedMetalNeed;
-
-        houseNails.text = nailsHave + " / " + houseNailsNeed;
-        houseWood.text = woodHave + " / " + houseWoodNeed;
-        houseMetal.text = metalHave + " / " + houseMetalNeed;
-
-        fortNails.text = nailsHave + " / " + fortNailsNeed;
-        fortWood.text = woodHave + " / " + fortWoodNeed;
-        fortMetal.text = metalHave + " / " + fortMetalNeed;
+        UpdateNailsText();
+        UpdateWoodText();
+        UpdateMetalText();
 
         // Check if hut variables are complete
         if (nailsHave >= hutNailsNeed) {
             hutNailsComplete = true;
+            hutNails.color = Color.green;
         } else {
             hutNailsComplete = false;
+            hutNails.color = Color.red;
         }
         
         if (woodHave >= hutWoodNeed) {
@@ -209,10 +199,38 @@ public class GameInventory : MonoBehaviour
         }
     }
 
+    public void UpdateNailsText() {
+        hutNails.text = nailsHave + " / " + hutNailsNeed;
+        shedNails.text = nailsHave + " / " + shedNailsNeed;
+        houseNails.text = nailsHave + " / " + houseNailsNeed;
+        fortNails.text = nailsHave + " / " + fortNailsNeed; 
+    }
 
+    public void UpdateWoodText() {
+        hutWood.text = woodHave + " / " + hutWoodNeed;
+        shedWood.text = woodHave + " / " + shedWoodNeed;
+        houseWood.text = woodHave + " / " + houseWoodNeed;
+        fortWood.text = woodHave + " / " + fortWoodNeed;
+    }
 
+    public void UpdateMetalText() {
+        hutMetal.text = metalHave + " / " + hutMetalNeed;
+        shedMetal.text = metalHave + " / " + shedMetalNeed;
+        houseMetal.text = metalHave + " / " + houseMetalNeed;
+        fortMetal.text = metalHave + " / " + fortMetalNeed;
+    }
 
-    public void BuildHut(){
+    public void CheckNails() {
+        if (nailsHave >= hutNailsNeed) {
+            hutNailsComplete = true;
+            hutNails.color = Color.green;
+        } else {
+            hutNailsComplete = false;
+            hutNails.color = Color.red;
+        }
+    }
+
+        public void BuildHut(){
         Debug.Log("I built a hut!");
         //actual hut visibility goes here
         nailsHave -= hutNailsNeed;
@@ -243,7 +261,4 @@ public class GameInventory : MonoBehaviour
         woodHave -= fortWoodNeed;
         metalHave -= fortMetalNeed;
     }
-
-
-
 }
