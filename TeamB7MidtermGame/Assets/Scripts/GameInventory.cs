@@ -85,108 +85,11 @@ public class GameInventory : MonoBehaviour
         UpdateWoodText();
         UpdateMetalText();
 
-        // Check if hut variables are complete
-        if (nailsHave >= hutNailsNeed) {
-            hutNailsComplete = true;
-            hutNails.color = Color.green;
-        } else {
-            hutNailsComplete = false;
-            hutNails.color = Color.red;
-        }
-        
-        if (woodHave >= hutWoodNeed) {
-            hutWoodComplete = true;
-        } else {
-            hutWoodComplete = false;
-        }
-
-        if (metalHave >= hutMetalNeed) {
-            hutMetalComplete = true;
-        } else {
-            hutMetalComplete = false;
-        }
-
-        if (hutNailsComplete && hutWoodComplete && hutMetalComplete){
-            buildHutButton.SetActive(true);
-        } else {
-            buildHutButton.SetActive(false);
-        }
-
-        // Check if shed variables are complete
-        if (nailsHave >= shedNailsNeed) {
-            shedNailsComplete = true;
-        } else {
-            shedNailsComplete = false;
-        }
-        
-        if (woodHave >= shedWoodNeed) {
-            shedWoodComplete = true;
-        } else {
-            shedWoodComplete = false;
-        }
-
-        if (metalHave >= shedMetalNeed) {
-            shedMetalComplete = true;
-        } else {
-            shedMetalComplete = false;
-        }
-
-        if (shedNailsComplete && shedWoodComplete && shedMetalComplete){
-            buildShedButton.SetActive(true);
-        } else {
-            buildShedButton.SetActive(false);
-        }
-
-        // Check if house variables are complete
-        if (nailsHave >= houseNailsNeed) {
-            houseNailsComplete = true;
-        } else {
-            houseNailsComplete = false;
-        }
-        
-        if (woodHave >= houseWoodNeed) {
-            houseWoodComplete = true;
-        } else {
-            houseWoodComplete = false;
-        }
-
-        if (metalHave >= houseMetalNeed) {
-            houseMetalComplete = true;
-        } else {
-            houseMetalComplete = false;
-        }
-
-        if (houseNailsComplete && houseWoodComplete && houseMetalComplete){
-            buildHouseButton.SetActive(true);
-        } else {
-            buildHouseButton.SetActive(false);
-        }
-
-        // Check if fort variables are complete
-        if (nailsHave >= fortNailsNeed) {
-            fortNailsComplete = true;
-        } else {
-            fortNailsComplete = false;
-        }
-        
-        if (woodHave >= fortWoodNeed) {
-            fortWoodComplete = true;
-        } else {
-            fortWoodComplete = false;
-        }
-
-        if (metalHave >= fortMetalNeed) {
-            fortMetalComplete = true;
-        } else {
-            fortMetalComplete = false;
-        }
-
-        if (fortNailsComplete && fortWoodComplete && fortMetalComplete){
-            buildFortButton.SetActive(true);
-        } else {
-            buildFortButton.SetActive(false);
-        }
-
+        // Update build button status
+        checkHut();
+        checkShed();
+        checkHouse();
+        checkFort();
     }
 
     public void ToggleBuildMenu(){
@@ -204,6 +107,8 @@ public class GameInventory : MonoBehaviour
         shedNails.text = nailsHave + " / " + shedNailsNeed;
         houseNails.text = nailsHave + " / " + houseNailsNeed;
         fortNails.text = nailsHave + " / " + fortNailsNeed; 
+
+        CheckNails();
     }
 
     public void UpdateWoodText() {
@@ -211,6 +116,8 @@ public class GameInventory : MonoBehaviour
         shedWood.text = woodHave + " / " + shedWoodNeed;
         houseWood.text = woodHave + " / " + houseWoodNeed;
         fortWood.text = woodHave + " / " + fortWoodNeed;
+
+        CheckWood();
     }
 
     public void UpdateMetalText() {
@@ -218,8 +125,11 @@ public class GameInventory : MonoBehaviour
         shedMetal.text = metalHave + " / " + shedMetalNeed;
         houseMetal.text = metalHave + " / " + houseMetalNeed;
         fortMetal.text = metalHave + " / " + fortMetalNeed;
+
+        CheckMetal();
     }
 
+    // check if enough of a material to build each structure
     public void CheckNails() {
         if (nailsHave >= hutNailsNeed) {
             hutNailsComplete = true;
@@ -228,9 +138,135 @@ public class GameInventory : MonoBehaviour
             hutNailsComplete = false;
             hutNails.color = Color.red;
         }
+
+        if (nailsHave >= shedNailsNeed) {
+            shedNailsComplete = true;
+            shedNails.color = Color.green;
+        } else {
+            shedNailsComplete = false;
+            shedNails.color = Color.red;
+        }
+
+        if (nailsHave >= houseNailsNeed) {
+            houseNailsComplete = true;
+            houseNails.color = Color.green;
+        } else {
+            houseNailsComplete = false;
+            houseNails.color = Color.red;
+        }
+
+        if (nailsHave >= fortNailsNeed) {
+            fortNailsComplete = true;
+            fortNails.color = Color.green;
+        } else {
+            fortNailsComplete = false;
+            fortNails.color = Color.red;
+        }
     }
 
-        public void BuildHut(){
+    public void CheckWood() {
+        if (woodHave >= hutWoodNeed) {
+            hutWoodComplete = true;
+            hutWood.color = Color.green;
+        } else {
+            hutWoodComplete = false;
+            hutWood.color = Color.red;
+        }
+
+        if (woodHave >= shedWoodNeed) {
+            shedWoodComplete = true;
+            shedWood.color = Color.green;
+        } else {
+            shedWoodComplete = false;
+            shedWood.color = Color.red;
+        }
+
+        if (woodHave >= houseWoodNeed) {
+            houseWoodComplete = true;
+            houseWood.color = Color.green;
+        } else {
+            houseWoodComplete = false;
+            houseWood.color = Color.red;
+        }
+
+        if (woodHave >= fortWoodNeed) {
+            fortWoodComplete = true;
+            fortWood.color = Color.green;
+        } else {
+            fortWoodComplete = false;
+            fortWood.color = Color.red;
+        }
+    }
+
+    public void CheckMetal() {
+        if (metalHave >= hutMetalNeed) {
+            hutMetalComplete = true;
+            hutMetal.color = Color.green;
+        } else {
+            hutMetalComplete = false;
+            hutMetal.color = Color.red;
+        }
+
+        if (metalHave >= shedMetalNeed) {
+            shedMetalComplete = true;
+            shedMetal.color = Color.green;
+        } else {
+            shedMetalComplete = false;
+            shedMetal.color = Color.red;
+        }
+
+        if (metalHave >= houseMetalNeed) {
+            houseMetalComplete = true;
+            houseMetal.color = Color.green;
+        } else {
+            houseMetalComplete = false;
+            houseMetal.color = Color.red;
+        }
+
+        if (metalHave >= fortMetalNeed) {
+            fortMetalComplete = true;
+            fortMetal.color = Color.green;
+        } else {
+            fortMetalComplete = false;
+            fortMetal.color = Color.red;
+        }
+    }
+
+    // check if enough materials to build each structure
+    public void checkHut() {
+        if (hutNailsComplete && hutWoodComplete && hutMetalComplete){
+            buildHutButton.SetActive(true);
+        } else {
+            buildHutButton.SetActive(false);
+        }
+    }
+
+    public void checkShed() {
+        if (shedNailsComplete && shedWoodComplete && shedMetalComplete){
+            buildShedButton.SetActive(true);
+        } else {
+            buildShedButton.SetActive(false);
+        }
+    }
+
+    public void checkHouse() {
+        if (houseNailsComplete && houseWoodComplete && houseMetalComplete){
+            buildHouseButton.SetActive(true);
+        } else {
+            buildHouseButton.SetActive(false);
+        }
+    }
+
+    public void checkFort() {
+        if (fortNailsComplete && fortWoodComplete && fortMetalComplete){
+            buildFortButton.SetActive(true);
+        } else {
+            buildFortButton.SetActive(false);
+        }
+    }
+
+    // build each structure
+    public void BuildHut(){
         Debug.Log("I built a hut!");
         //actual hut visibility goes here
         nailsHave -= hutNailsNeed;
