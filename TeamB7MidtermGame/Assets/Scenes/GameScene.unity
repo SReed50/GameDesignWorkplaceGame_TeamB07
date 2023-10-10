@@ -175,6 +175,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3260878879964772208, guid: 29a31cb02b92b463c9385191c60c5411, type: 3}
+      propertyPath: myObjects.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3260878879964772208, guid: 29a31cb02b92b463c9385191c60c5411, type: 3}
+      propertyPath: myObjects.Array.data[0]
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 9dc64554ad5bc4415ac59289fa72ffcc, type: 3}
+    - target: {fileID: 3260878879964772208, guid: 29a31cb02b92b463c9385191c60c5411, type: 3}
+      propertyPath: myObjects.Array.data[1]
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: a3e2b6e91b25c4bd8a35b02e0414031e, type: 3}
+    - target: {fileID: 3260878879964772208, guid: 29a31cb02b92b463c9385191c60c5411, type: 3}
+      propertyPath: myObjects.Array.data[2]
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: b71d8697bf5914c8faf4226b0eb20898, type: 3}
+    - target: {fileID: 3260878879964772208, guid: 29a31cb02b92b463c9385191c60c5411, type: 3}
+      propertyPath: myObjects.Array.data[3]
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: fc37a9ccc810845fe993fdec2a0ff298, type: 3}
     - target: {fileID: 6317925665899653611, guid: 29a31cb02b92b463c9385191c60c5411, type: 3}
       propertyPath: m_Name
       value: Spawner
