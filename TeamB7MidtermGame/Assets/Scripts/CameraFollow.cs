@@ -1,0 +1,20 @@
+using UnityEngine;
+
+public class CameraFollow : MonoBehaviour {
+    private Transform target;     // drag intended Player object into Inspector slot
+    public float smoother = 0.1f;
+    public Vector3 offset;     // set the offset in the editor
+
+    void Start(){
+        target= GameObject.FindWithTag("Player").GetComponent<Transform>();
+    }
+
+
+    void FixedUpdate () {
+       Vector3 newPos = target.position + offset;
+       Vector3 smPos = Vector3.Lerp (transform.position, newPos, smoother * Time.deltaTime);
+       transform.position = smPos;
+
+       transform.LookAt (target);
+    }
+}
