@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class Display_and_decrease_playerhealth_when_collided_with_enemies_or_objects : MonoBehaviour
 {
       public float health = 100f;
@@ -30,9 +31,15 @@ public class Display_and_decrease_playerhealth_when_collided_with_enemies_or_obj
             text.text = "Health: " + health;
             if (health == 0) {
                 Debug.Log("You lose!");
+
+                #if UNITY_EDITOR
+                    UnityEditor.EditorApplication.isPlaying = false;
+                #else
+                    Application.Quit();
+                #endif
             }
         }
-                             
+                         
     }
  
 }

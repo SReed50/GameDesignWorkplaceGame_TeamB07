@@ -155,6 +155,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1873208620}
     - target: {fileID: 5716466721474788644, guid: 5e9a35f546c674dac996d5796ef99df1, type: 3}
+      propertyPath: hut
+      value: 
+      objectReference: {fileID: 6846741251142618024, guid: 71d698cb52bbb4ff7a699a7a78e0427b, type: 3}
+    - target: {fileID: 5716466721474788644, guid: 5e9a35f546c674dac996d5796ef99df1, type: 3}
       propertyPath: hutWood
       value: 
       objectReference: {fileID: 815542300}
@@ -973,7 +977,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6242b5c66324b4ec49a6923e9a568ad8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smoother: 0.3
+  smoother: 3
   offset: {x: 0, y: 8, z: -15}
 --- !u!114 &1885030931 stripped
 MonoBehaviour:
