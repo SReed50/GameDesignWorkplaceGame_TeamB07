@@ -17,11 +17,11 @@ public class RandomObjectSpawner : MonoBehaviour
     }
 
     public void spawn () {
-                    int randomIndex = Random.Range(0, myObjects.Length);
-            Vector3 randomSpawnPosition = new Vector3(Random.Range(-330, 180), 1.5f, Random.Range(-160, 160));
+        int randomIndex = Random.Range(0, myObjects.Length);
+        Vector3 randomSpawnPosition = new Vector3(Random.Range(-330, 180), 1.5f, Random.Range(-160, 160));
 
-            Instantiate(myObjects[randomIndex], randomSpawnPosition, Quaternion.identity);
-            spawnCount++;
+        Instantiate(myObjects[randomIndex], randomSpawnPosition, Quaternion.identity);
+        spawnCount++;
 
     }
 }

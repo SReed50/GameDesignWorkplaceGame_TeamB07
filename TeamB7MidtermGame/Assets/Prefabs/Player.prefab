@@ -226,6 +226,7 @@ GameObject:
   - component: {fileID: 2232670346982729088}
   - component: {fileID: 4858674482892516072}
   - component: {fileID: 1184863931822133392}
+  - component: {fileID: 5716466721474788644}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -329,3 +330,47 @@ MonoBehaviour:
   health: 100
   slider: {fileID: 0}
   text: {fileID: 0}
+--- !u!114 &5716466721474788644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7933596248461917102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64f9c8e40dfb448169ec57a56d35489b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuBuild: {fileID: 0}
+  nailsHave: 0
+  woodHave: 0
+  metalHave: 0
+  buildHutButton: {fileID: 0}
+  hutNails: {fileID: 0}
+  hutWood: {fileID: 0}
+  hutMetal: {fileID: 0}
+  hutNailsNeed: 4
+  hutWoodNeed: 6
+  hutMetalNeed: 0
+  buildShedButton: {fileID: 0}
+  shedNails: {fileID: 0}
+  shedWood: {fileID: 0}
+  shedMetal: {fileID: 0}
+  shedNailsNeed: 4
+  shedWoodNeed: 6
+  shedMetalNeed: 2
+  buildHouseButton: {fileID: 0}
+  houseNails: {fileID: 0}
+  houseWood: {fileID: 0}
+  houseMetal: {fileID: 0}
+  houseNailsNeed: 10
+  houseWoodNeed: 10
+  houseMetalNeed: 5
+  buildFortButton: {fileID: 0}
+  fortNails: {fileID: 0}
+  fortWood: {fileID: 0}
+  fortMetal: {fileID: 0}
+  fortNailsNeed: 25
+  fortWoodNeed: 6
+  fortMetalNeed: 12
