@@ -246,7 +246,7 @@ Transform:
   m_Children:
   - {fileID: 2107486178286285807}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &7515316601340415873
 Rigidbody:
@@ -311,5 +311,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
-  speed: 30
+  speed: 100
   turnSmoothTime: 0.1
