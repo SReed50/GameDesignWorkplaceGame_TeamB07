@@ -17,10 +17,10 @@ public class GameHandler : MonoBehaviour
     void Start()
     {
         theTimer = startTime;
-        if (isEnd) {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-        }
+        // if (isEnd) {
+        //     Cursor.lockState = CursorLockMode.None;
+        //     Cursor.visible = true;
+        // }
     }
 
     // Update is called once per frame
