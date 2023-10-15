@@ -28,6 +28,9 @@ public class Display_and_decrease_playerhealth_when_collided_with_enemies_or_obj
             health = health - 10f;
             slider.value = health;                           
             text.text = "Health: " + health;
+            if (health == 0) {
+                Debug.Log("You lose!");
+            }
         }
                              
     }
