@@ -24,6 +24,7 @@ public class Display_and_decrease_playerhealth_when_collided_with_enemies_or_obj
     {
                                                     
         if (obj.gameObject.tag == "Hazard") {
+            Destroy(obj.gameObject);
             health = health - 10f;
             slider.value = health;                           
             text.text = "Health: " + health;

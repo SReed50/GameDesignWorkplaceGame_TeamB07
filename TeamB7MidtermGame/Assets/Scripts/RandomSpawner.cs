@@ -8,12 +8,9 @@ public class RandomObjectSpawner : MonoBehaviour
     public GameObject[] myObjects;
     public int spawnCount;
 
-    void Update()
+    void Start()
     {
-        if (spawnCount >= 200) {
-
-        }
-        else {
+        while (spawnCount < 200) {
             spawn();
         }
             
