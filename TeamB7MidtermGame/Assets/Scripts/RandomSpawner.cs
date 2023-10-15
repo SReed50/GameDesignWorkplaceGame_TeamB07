@@ -10,7 +10,7 @@ public class RandomObjectSpawner : MonoBehaviour
 
     void Start()
     {
-        while (spawnCount < 200) {
+        while (spawnCount < 300) {
             spawn();
         }
             
