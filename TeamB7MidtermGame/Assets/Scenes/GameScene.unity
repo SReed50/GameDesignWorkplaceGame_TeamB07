@@ -700,5 +700,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6242b5c66324b4ec49a6923e9a568ad8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smoother: 0.1
-  offset: {x: 0, y: 11, z: -15}
+  smoother: 0.3
+  offset: {x: 0, y: 8, z: -15}
