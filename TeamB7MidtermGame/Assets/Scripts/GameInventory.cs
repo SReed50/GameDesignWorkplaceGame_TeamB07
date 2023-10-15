@@ -90,9 +90,9 @@ public class GameInventory : MonoBehaviour
         }
 
         // Set text vars
-        UpdateNailsText();
-        UpdateWoodText();
-        UpdateMetalText();
+        // UpdateNailsText();
+        // UpdateWoodText();
+        // UpdateMetalText();
         // only here temporarily until we have a way to pick up an object
     }
 
