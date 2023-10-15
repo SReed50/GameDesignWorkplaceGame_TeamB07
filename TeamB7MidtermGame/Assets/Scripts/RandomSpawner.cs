@@ -8,23 +8,20 @@ public class RandomObjectSpawner : MonoBehaviour
     public GameObject[] myObjects;
     public int spawnCount;
 
-    void Update()
+    void Start()
     {
-        if (spawnCount >= 200) {
-
-        }
-        else {
+        while (spawnCount < 300) {
             spawn();
         }
             
     }
 
     public void spawn () {
-                    int randomIndex = Random.Range(0, myObjects.Length);
-            Vector3 randomSpawnPosition = new Vector3(Random.Range(-330, 180), 3, Random.Range(-160, 160));
+        int randomIndex = Random.Range(0, myObjects.Length);
+        Vector3 randomSpawnPosition = new Vector3(Random.Range(-330, 180), 1.5f, Random.Range(-160, 160));
 
-            Instantiate(myObjects[randomIndex], randomSpawnPosition, Quaternion.identity);
-            spawnCount++;
+        Instantiate(myObjects[randomIndex], randomSpawnPosition, Quaternion.identity);
+        spawnCount++;
 
     }
 }

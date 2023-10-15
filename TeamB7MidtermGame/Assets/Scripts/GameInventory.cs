@@ -15,49 +15,53 @@ public class GameInventory : MonoBehaviour
     public int metalHave = 0;
 
     // Hut variables:
+    public GameObject hut;
     public GameObject buildHutButton;
     public Text hutNails;
     public Text hutWood;
     public Text hutMetal;
-    public int hutNailsNeed = 4;
-    public int hutWoodNeed = 6;
-    public int hutMetalNeed = 0;
+    private int hutNailsNeed = 4;
+    private int hutWoodNeed = 6;
+    private int hutMetalNeed = 0;
     private bool hutNailsComplete = false;
     private bool hutWoodComplete = false;
     private bool hutMetalComplete = false;
 
     // Shed variables:
+    public GameObject shed;
     public GameObject buildShedButton;
     public Text shedNails;
     public Text shedWood;
     public Text shedMetal;
-    public int shedNailsNeed = 4;
-    public int shedWoodNeed = 6;
-    public int shedMetalNeed = 2;
+    private int shedNailsNeed = 4;
+    private int shedWoodNeed = 6;
+    private int shedMetalNeed = 2;
     private bool shedNailsComplete = false;
     private bool shedWoodComplete = false;
     private bool shedMetalComplete = false;
 
     // House variables:
+    public GameObject house;
     public GameObject buildHouseButton;
     public Text houseNails;
     public Text houseWood;
     public Text houseMetal;
-    public int houseNailsNeed = 10;
-    public int houseWoodNeed = 10;
-    public int houseMetalNeed = 5;
+    private int houseNailsNeed = 10;
+    private int houseWoodNeed = 10;
+    private int houseMetalNeed = 5;
     private bool houseNailsComplete = false;
     private bool houseWoodComplete = false;
     private bool houseMetalComplete = false;
 
     // Fort variables:
+    public GameObject fort;
     public GameObject buildFortButton;
     public Text fortNails;
     public Text fortWood;
     public Text fortMetal;
-    public int fortNailsNeed = 25;
-    public int fortWoodNeed = 6;
-    public int fortMetalNeed = 12;
+    private int fortNailsNeed = 25;
+    private int fortWoodNeed = 6;
+    private int fortMetalNeed = 12;
     private bool fortNailsComplete = false;
     private bool fortWoodComplete = false;
     private bool fortMetalComplete = false;
@@ -71,6 +75,11 @@ public class GameInventory : MonoBehaviour
         } else {
             menuBuild.SetActive(true);
         }
+
+        hut.SetActive(false);
+        //shed.SetActive(false);
+        house.SetActive(false);
+        //fort.SetActive(false);
     }
 
     // Update is called once per frame
@@ -81,9 +90,9 @@ public class GameInventory : MonoBehaviour
         }
 
         // Set text vars
-        UpdateNailsText();
-        UpdateWoodText();
-        UpdateMetalText();
+        // UpdateNailsText();
+        // UpdateWoodText();
+        // UpdateMetalText();
         // only here temporarily until we have a way to pick up an object
     }
 
@@ -98,6 +107,23 @@ public class GameInventory : MonoBehaviour
             // Set text vars
             UpdateNailsText();
             UpdateWoodText();
+            UpdateMetalText();
+        }
+    }
+
+    void OnCollisionEnter (Collision other) {
+
+        if (other.gameObject.tag == "Nails") {
+            Destroy(other.gameObject);
+            nailsHave++;
+            UpdateNailsText();
+        } else if (other.gameObject.tag == "Wood") {
+            Destroy(other.gameObject);
+            woodHave++;
+            UpdateWoodText();
+        } else if (other.gameObject.tag == "Metal") {
+            Destroy(other.gameObject);
+            metalHave++;
             UpdateMetalText();
         }
     }
@@ -286,7 +312,7 @@ public class GameInventory : MonoBehaviour
     // build each structure
     public void BuildHut(){
         Debug.Log("I built a hut!");
-        //actual hut visibility goes here
+        hut.SetActive(true);
 
         nailsHave -= hutNailsNeed;
         woodHave -= hutWoodNeed;
@@ -314,7 +340,7 @@ public class GameInventory : MonoBehaviour
 
     public void BuildHouse(){
         Debug.Log("I built a house!");
-        //actual hut visibility goes here
+        house.SetActive(true);
 
         nailsHave -= houseNailsNeed;
         woodHave -= houseWoodNeed;
