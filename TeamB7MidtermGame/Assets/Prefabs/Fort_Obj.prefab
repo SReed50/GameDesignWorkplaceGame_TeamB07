@@ -31,7 +31,7 @@ Transform:
   m_Children:
   - {fileID: 6866431906978635483}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &871492641058960470
 BoxCollider:
@@ -111,7 +111,9 @@ PrefabInstance:
       value: bigg
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 65702495048144492, guid: 2d2429f9cd869419e801907b676ef858, type: 3}
+    - {fileID: -8700617353114198275, guid: 2d2429f9cd869419e801907b676ef858, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d2429f9cd869419e801907b676ef858, type: 3}

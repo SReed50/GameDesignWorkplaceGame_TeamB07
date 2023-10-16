@@ -1297,7 +1297,9 @@ PrefabInstance:
       value: Fort_Obj
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 6352787006787972956, guid: 14682b3522f7e4b7195667e7ab63ae7a, type: 3}
+    - {fileID: 6882059403191953357, guid: 14682b3522f7e4b7195667e7ab63ae7a, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14682b3522f7e4b7195667e7ab63ae7a, type: 3}
