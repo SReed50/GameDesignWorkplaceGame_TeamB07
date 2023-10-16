@@ -79,7 +79,7 @@ public class GameInventory : MonoBehaviour
         hut.SetActive(false);
         //shed.SetActive(false);
         house.SetActive(false);
-        //fort.SetActive(false);
+        fort.SetActive(false);
     }
 
     // Update is called once per frame
@@ -355,6 +355,7 @@ public class GameInventory : MonoBehaviour
     public void BuildFort(){
         Debug.Log("I built a fort!");
         //actual hut visibility goes here
+        fort.SetActive(true);
 
         nailsHave -= fortNailsNeed;
         woodHave -= fortWoodNeed;
