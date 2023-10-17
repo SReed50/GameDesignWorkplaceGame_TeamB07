@@ -969,6 +969,14 @@ PrefabInstance:
       propertyPath: m_PresetInfoIsWorld
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2029399912533768889, guid: 9afd8b755a9214d3796ddd24057f3381, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1280
+      objectReference: {fileID: 0}
+    - target: {fileID: 2029399912533768889, guid: 9afd8b755a9214d3796ddd24057f3381, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 720
+      objectReference: {fileID: 0}
     - target: {fileID: 4411906567005718336, guid: 9afd8b755a9214d3796ddd24057f3381, type: 3}
       propertyPath: m_Name
       value: Canvas
