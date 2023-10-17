@@ -93,7 +93,7 @@ public class GameHandler : MonoBehaviour
                 SceneManager.LoadScene("WinScene");
             }
         } else {
-            SceneManager.LoadScene("You Lose");
+            SceneManager.LoadScene("LoseScene");
         }
     }
 }
