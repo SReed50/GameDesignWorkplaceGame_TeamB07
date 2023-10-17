@@ -9,18 +9,16 @@ public class GameHandler : MonoBehaviour
 
     public float theTimer;
     public Text timerText;
-    public float startTime = 91;
+    public float startTime = 121;
 
     public bool isEnd = true;
+    public GameObject tornado;
 
     // Start is called before the first frame update
     void Start()
     {
         theTimer = startTime;
-        // if (isEnd) {
-        //     Cursor.lockState = CursorLockMode.None;
-        //     Cursor.visible = true;
-        // }
+        tornado.SetActive(false);
     }
 
     // Update is called once per frame
@@ -33,9 +31,10 @@ public class GameHandler : MonoBehaviour
 
     void FixedUpdate() {
         theTimer -= Time.deltaTime;
-        timerText.text = "" + Mathf.Floor(theTimer);
-        if ((theTimer <= 1)&&(isEnd == false)) {
-            SceneManager.LoadScene("MainMenu");
+        if (theTimer > 0) {
+            timerText.text = "" + Mathf.Floor(theTimer);
+        } else {
+            StartCoroutine(NaturalDisaster());
         }
     }
 
@@ -45,5 +44,12 @@ public class GameHandler : MonoBehaviour
         #else
             Application.Quit();
         #endif
+    }
+
+    IEnumerator NaturalDisaster() {
+        tornado.SetActive(true);
+        yield return new WaitForSeconds(5.0f);
+        SceneManager.LoadScene("MainMenu");
+        // game over goes here
     }
 }
