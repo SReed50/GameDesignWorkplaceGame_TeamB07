@@ -10,7 +10,7 @@ public class RandomObjectSpawner : MonoBehaviour
 
     void Start()
     {
-        while (spawnCount < 300) {
+        while (spawnCount < 125) {
             spawn();
         }
             
@@ -18,7 +18,7 @@ public class RandomObjectSpawner : MonoBehaviour
 
     public void spawn () {
         int randomIndex = Random.Range(0, myObjects.Length);
-        Vector3 randomSpawnPosition = new Vector3(Random.Range(-330, 180), 1.5f, Random.Range(-160, 160));
+        Vector3 randomSpawnPosition = new Vector3(Random.Range(-315, 185), 1.5f, Random.Range(0, 85));
 
         Instantiate(myObjects[randomIndex], randomSpawnPosition, Quaternion.identity);
         spawnCount++;
