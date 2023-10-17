@@ -8,6 +8,7 @@ public class GameInventory : MonoBehaviour
 {
     public GameObject menuBuild; 
     public static bool menuBuildIsOpen = false;
+    public static string buildType;
     
     // Inventory Variables
     public int nailsHave = 0;
@@ -79,6 +80,7 @@ public class GameInventory : MonoBehaviour
             menuBuild.SetActive(true);
         }
 
+        buildType = "none";
         hut.SetActive(false);
         shed.SetActive(false);
         house.SetActive(false);
@@ -311,6 +313,7 @@ public class GameInventory : MonoBehaviour
 
     // build each structure
     public void BuildHut(){
+        buildType = "hut";
         hut.SetActive(true);
         shed.SetActive(false);
         house.SetActive(false);
@@ -327,7 +330,7 @@ public class GameInventory : MonoBehaviour
     }
 
     public void BuildShed(){
-        Debug.Log("I built a shed!");
+        buildType = "shed";
         hut.SetActive(false);
         shed.SetActive(true);
         house.SetActive(false);
@@ -344,6 +347,7 @@ public class GameInventory : MonoBehaviour
     }
 
     public void BuildHouse(){
+        buildType = "house";
         hut.SetActive(false);
         shed.SetActive(false);
         house.SetActive(true);
@@ -360,6 +364,7 @@ public class GameInventory : MonoBehaviour
     }
 
     public void BuildFort(){
+        buildType = "fort";
         hut.SetActive(false);
         shed.SetActive(false);
         house.SetActive(false);

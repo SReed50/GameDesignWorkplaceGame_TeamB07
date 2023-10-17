@@ -13,18 +13,25 @@ public class GameHandler : MonoBehaviour
 
     public bool isEnd = true;
     public GameObject tornado;
+    private GameObject player;
 
     // Start is called before the first frame update
     void Start()
     {
         theTimer = startTime;
         tornado.SetActive(false);
+        player = GameObject.FindWithTag("Player");
     }
 
     // Update is called once per frame
     void Update() 
     {
-
+        if ((Input.GetKeyDown("e")) && PlayerMovement.playerSafe) {
+            PlayerMovement.frozen = false;
+            PlayerMovement.playerSafe = false;
+            player.SetActive(true);
+            player.transform.position = new Vector3(0f, 1.62f, 25f);
+        }
     }
 
     void FixedUpdate() {
@@ -45,6 +52,8 @@ public class GameHandler : MonoBehaviour
             // Please also reset all static variables here, for new games!
         theTimer = startTime;
         GameInventory.menuBuildIsOpen = false;
+        PlayerMovement.frozen = false;
+        PlayerMovement.playerSafe = false;
       }
 
     public void QuitGame() {
