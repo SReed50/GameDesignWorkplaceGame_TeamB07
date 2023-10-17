@@ -22,21 +22,29 @@ public class GameHandler : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void Update() 
     {
-        if (Input.GetKey("escape")) {
-                 QuitGame();
-        }
+
     }
 
     void FixedUpdate() {
-        theTimer -= Time.deltaTime;
-        if (theTimer > 0) {
+        if (!(PauseMenu.gamePaused) && (theTimer > 0)) {
+            theTimer -= Time.deltaTime;
             timerText.text = "" + Mathf.Floor(theTimer);
         } else {
+            timerText.text = "0";
             StartCoroutine(NaturalDisaster());
         }
     }
+
+    public void RestartGame() {
+        Time.timeScale = 1f;
+        PauseMenu.gamePaused = false;
+        SceneManager.LoadScene("MainMenu");
+            // Please also reset all static variables here, for new games!
+        theTimer = startTime;
+        GameInventory.menuBuildIsOpen = false;
+      }
 
     public void QuitGame() {
         #if UNITY_EDITOR
