@@ -9,7 +9,7 @@ public class GameHandler : MonoBehaviour
 
     public float theTimer;
     public Text timerText;
-    public float startTime = 20;
+    public float startTime = 91;
 
     public bool isEnd = true;
 
@@ -33,9 +33,9 @@ public class GameHandler : MonoBehaviour
 
     void FixedUpdate() {
         theTimer -= Time.deltaTime;
-        timerText.text = "Time: " + Mathf.Floor(theTimer);
-        if ((theTimer <= 0)&&(isEnd == false)) {
-            SceneManager.LoadScene("EndLose");
+        timerText.text = "" + Mathf.Floor(theTimer);
+        if ((theTimer <= 1)&&(isEnd == false)) {
+            SceneManager.LoadScene("MainMenu");
         }
     }
 
