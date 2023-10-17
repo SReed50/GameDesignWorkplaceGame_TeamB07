@@ -9,7 +9,7 @@ public class GameHandler : MonoBehaviour
 
     public float theTimer;
     public Text timerText;
-    private float startTime = 121;
+    private float startTime = 151;
 
     public bool isEnd = true;
     public GameObject tornado;
@@ -23,16 +23,28 @@ public class GameHandler : MonoBehaviour
         tornado.SetActive(false);
         player = GameObject.FindWithTag("Player");
         survival = Random.Range(1, 11);
+        PlayerMovement.playerSafe = false;
+        PlayerMovement.frozen = false;
     }
 
     // Update is called once per frame
     void Update() 
     {
-        if ((Input.GetKeyDown("e")) && PlayerMovement.playerSafe) {
-            PlayerMovement.frozen = false;
-            PlayerMovement.playerSafe = false;
-            player.SetActive(true);
-            player.transform.position = new Vector3(0f, 1.62f, 25f);
+        if (Input.GetKeyDown("e")) {
+            if ((!PlayerMovement.playerSafe) && (!PlayerMovement.frozen) && (GameInventory.buildType != "none") && 
+                (player.transform.position.x >= -10) && (player.transform.position.x <= 10) &&
+                (player.transform.position.z >= 25) && (player.transform.position.z <= 55)) {
+                
+                PlayerMovement.frozen = true;
+                PlayerMovement.playerSafe = true;
+                player.SetActive(false);
+                player.transform.position = new Vector3(0f, 1.62f, 40f);
+            } else if (PlayerMovement.playerSafe) {
+                PlayerMovement.frozen = false;
+                PlayerMovement.playerSafe = false;
+                player.SetActive(true);
+                player.transform.position = new Vector3(0f, 1.62f, 25f);
+            }
         }
     }
 
@@ -56,6 +68,7 @@ public class GameHandler : MonoBehaviour
         GameInventory.menuBuildIsOpen = false;
         PlayerMovement.frozen = false;
         PlayerMovement.playerSafe = false;
+        survival = Random.Range(1, 11);
       }
 
     public void QuitGame() {
@@ -72,19 +85,19 @@ public class GameHandler : MonoBehaviour
 
         if (PlayerMovement.playerSafe) {
             if (GameInventory.buildType == "hut") {
-                if (survival < 3) {
+                if (survival < 4) {
                     SceneManager.LoadScene("WinScene");
                 } else {
                     SceneManager.LoadScene("LoseScene");
                 }
             } else if (GameInventory.buildType == "shed") {
-                if (survival < 5) {
+                if (survival < 6) {
                     SceneManager.LoadScene("WinScene");
                 } else {
                     SceneManager.LoadScene("LoseScene");
                 }
             } else if (GameInventory.buildType == "house") {
-                if (survival < 8) {
+                if (survival < 10) {
                     SceneManager.LoadScene("WinScene");
                 } else {
                     SceneManager.LoadScene("LoseScene");

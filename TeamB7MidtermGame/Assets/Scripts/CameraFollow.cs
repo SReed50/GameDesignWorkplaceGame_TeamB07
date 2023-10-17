@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour {
     private Transform target;     // drag intended Player object into Inspector slot
-    public float smoother = 3f;
+    public float smoother = 5f;
     public Vector3 offset;     // set the offset in the editor
 
     void Start(){
