@@ -42,8 +42,8 @@ public class PlayerMovement : MonoBehaviour {
 
         if (Input.GetKeyDown("e")) {
             if ((!playerSafe) && (!frozen) && (GameInventory.buildType != "none") && 
-                (player.transform.position.x >= -15) && (player.transform.position.x <= 15) &&
-                (player.transform.position.z >= 25) && (player.transform.position.z <= 55)) {
+                (player.transform.position.x >= -10) && (player.transform.position.x <= 10) &&
+                (player.transform.position.z >= 30) && (player.transform.position.z <= 50)) {
                 
                 frozen = true;
                 playerSafe = true;

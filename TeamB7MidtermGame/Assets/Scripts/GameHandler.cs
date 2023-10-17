@@ -14,6 +14,7 @@ public class GameHandler : MonoBehaviour
     public bool isEnd = true;
     public GameObject tornado;
     private GameObject player;
+    public int survival;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,7 @@ public class GameHandler : MonoBehaviour
         theTimer = startTime;
         tornado.SetActive(false);
         player = GameObject.FindWithTag("Player");
+        survival = Random.Range(1, 11);
     }
 
     // Update is called once per frame
@@ -67,7 +69,31 @@ public class GameHandler : MonoBehaviour
     IEnumerator NaturalDisaster() {
         tornado.SetActive(true);
         yield return new WaitForSeconds(5.0f);
-        SceneManager.LoadScene("MainMenu");
-        // game over goes here
+
+        if (PlayerMovement.playerSafe) {
+            if (GameInventory.buildType == "hut") {
+                if (survival < 3) {
+                    SceneManager.LoadScene("WinScene");
+                } else {
+                    SceneManager.LoadScene("LoseScene");
+                }
+            } else if (GameInventory.buildType == "shed") {
+                if (survival < 5) {
+                    SceneManager.LoadScene("WinScene");
+                } else {
+                    SceneManager.LoadScene("LoseScene");
+                }
+            } else if (GameInventory.buildType == "house") {
+                if (survival < 8) {
+                    SceneManager.LoadScene("WinScene");
+                } else {
+                    SceneManager.LoadScene("LoseScene");
+                }
+            } else {
+                SceneManager.LoadScene("WinScene");
+            }
+        } else {
+            SceneManager.LoadScene("You Lose");
+        }
     }
 }
