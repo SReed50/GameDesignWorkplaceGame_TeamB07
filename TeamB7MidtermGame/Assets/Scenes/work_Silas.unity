@@ -342,9 +342,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1112311454}
     - target: {fileID: 5716466721474788644, guid: 5e9a35f546c674dac996d5796ef99df1, type: 3}
+      propertyPath: wood
+      value: 
+      objectReference: {fileID: 1384058219}
+    - target: {fileID: 5716466721474788644, guid: 5e9a35f546c674dac996d5796ef99df1, type: 3}
       propertyPath: house
       value: 
       objectReference: {fileID: 1979341482}
+    - target: {fileID: 5716466721474788644, guid: 5e9a35f546c674dac996d5796ef99df1, type: 3}
+      propertyPath: metal
+      value: 
+      objectReference: {fileID: 1778382560}
+    - target: {fileID: 5716466721474788644, guid: 5e9a35f546c674dac996d5796ef99df1, type: 3}
+      propertyPath: nails
+      value: 
+      objectReference: {fileID: 1456244846}
     - target: {fileID: 5716466721474788644, guid: 5e9a35f546c674dac996d5796ef99df1, type: 3}
       propertyPath: hutWood
       value: 
@@ -514,11 +526,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1384058219 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3434293776623325875, guid: e3c3f85e90102458eb50752ae5ea7bee, type: 3}
+  m_PrefabInstance: {fileID: 5658779786945313920}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1456244846 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 930848760298863510, guid: e3c3f85e90102458eb50752ae5ea7bee, type: 3}
+  m_PrefabInstance: {fileID: 5658779786945313920}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1686532850 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7324733006325622338, guid: e3c3f85e90102458eb50752ae5ea7bee, type: 3}
   m_PrefabInstance: {fileID: 5658779786945313920}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1778382560 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2097092975826286682, guid: e3c3f85e90102458eb50752ae5ea7bee, type: 3}
+  m_PrefabInstance: {fileID: 5658779786945313920}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1832960878 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 449758949896552005, guid: e3c3f85e90102458eb50752ae5ea7bee, type: 3}
@@ -1143,6 +1188,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: GAMEHANDLER_CANVAS
       objectReference: {fileID: 0}
+    - target: {fileID: 693625779918268331, guid: e3c3f85e90102458eb50752ae5ea7bee, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 693625779918268331, guid: e3c3f85e90102458eb50752ae5ea7bee, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 80
+      objectReference: {fileID: 0}
     - target: {fileID: 1998987502245568142, guid: e3c3f85e90102458eb50752ae5ea7bee, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1203,6 +1256,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ToggleBuildMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 4217659953358532749, guid: e3c3f85e90102458eb50752ae5ea7bee, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4336353072363510955, guid: e3c3f85e90102458eb50752ae5ea7bee, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 4336353072363510955, guid: e3c3f85e90102458eb50752ae5ea7bee, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 4336353072363510955, guid: e3c3f85e90102458eb50752ae5ea7bee, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -510
+      objectReference: {fileID: 0}
     - target: {fileID: 4405965411753753066, guid: e3c3f85e90102458eb50752ae5ea7bee, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1210,6 +1279,10 @@ PrefabInstance:
     - target: {fileID: 4405965411753753066, guid: e3c3f85e90102458eb50752ae5ea7bee, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: BuildHouse
+      objectReference: {fileID: 0}
+    - target: {fileID: 4729759315456572307, guid: e3c3f85e90102458eb50752ae5ea7bee, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -300
       objectReference: {fileID: 0}
     - target: {fileID: 7963912248686465982, guid: e3c3f85e90102458eb50752ae5ea7bee, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1219,6 +1292,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ToggleBuildMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 8810702476886945567, guid: e3c3f85e90102458eb50752ae5ea7bee, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8855765045487892011, guid: e3c3f85e90102458eb50752ae5ea7bee, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 81d281c5d760a45b1843eb9715858651, type: 3}
     - target: {fileID: 8941726314002925848, guid: e3c3f85e90102458eb50752ae5ea7bee, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

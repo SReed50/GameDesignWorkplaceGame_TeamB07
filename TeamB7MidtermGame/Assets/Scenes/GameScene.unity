@@ -167,9 +167,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1767613349}
     - target: {fileID: 5716466721474788644, guid: 5e9a35f546c674dac996d5796ef99df1, type: 3}
+      propertyPath: wood
+      value: 
+      objectReference: {fileID: 1513792799}
+    - target: {fileID: 5716466721474788644, guid: 5e9a35f546c674dac996d5796ef99df1, type: 3}
       propertyPath: house
       value: 
       objectReference: {fileID: 1828921567}
+    - target: {fileID: 5716466721474788644, guid: 5e9a35f546c674dac996d5796ef99df1, type: 3}
+      propertyPath: metal
+      value: 
+      objectReference: {fileID: 1513792798}
+    - target: {fileID: 5716466721474788644, guid: 5e9a35f546c674dac996d5796ef99df1, type: 3}
+      propertyPath: nails
+      value: 
+      objectReference: {fileID: 1513792800}
     - target: {fileID: 5716466721474788644, guid: 5e9a35f546c674dac996d5796ef99df1, type: 3}
       propertyPath: hutWood
       value: 
@@ -657,6 +669,39 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3c3f85e90102458eb50752ae5ea7bee, type: 3}
+--- !u!114 &1513792798 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2097092975826286682, guid: e3c3f85e90102458eb50752ae5ea7bee, type: 3}
+  m_PrefabInstance: {fileID: 1513792797}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1513792799 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3434293776623325875, guid: e3c3f85e90102458eb50752ae5ea7bee, type: 3}
+  m_PrefabInstance: {fileID: 1513792797}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1513792800 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 930848760298863510, guid: e3c3f85e90102458eb50752ae5ea7bee, type: 3}
+  m_PrefabInstance: {fileID: 1513792797}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1548140571
 PrefabInstance:
   m_ObjectHideFlags: 0

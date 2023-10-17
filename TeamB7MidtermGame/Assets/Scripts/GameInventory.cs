@@ -11,8 +11,11 @@ public class GameInventory : MonoBehaviour
     
     // Inventory Variables
     public int nailsHave = 0;
+    public Text nails;
     public int woodHave = 0;
+    public Text wood;
     public int metalHave = 0;
+    public Text metal;
 
     // Hut variables:
     public GameObject hut;
@@ -129,6 +132,7 @@ public class GameInventory : MonoBehaviour
     }
 
     public void UpdateNailsText() {
+        nails.text = nailsHave + "";
         hutNails.text = nailsHave + " / " + hutNailsNeed;
         shedNails.text = nailsHave + " / " + shedNailsNeed;
         houseNails.text = nailsHave + " / " + houseNailsNeed;
@@ -138,6 +142,7 @@ public class GameInventory : MonoBehaviour
     }
 
     public void UpdateWoodText() {
+        wood.text = woodHave + "";
         hutWood.text = woodHave + " / " + hutWoodNeed;
         shedWood.text = woodHave + " / " + shedWoodNeed;
         houseWood.text = woodHave + " / " + houseWoodNeed;
@@ -147,6 +152,7 @@ public class GameInventory : MonoBehaviour
     }
 
     public void UpdateMetalText() {
+        metal.text = metalHave + "";
         hutMetal.text = metalHave + " / " + hutMetalNeed;
         shedMetal.text = metalHave + " / " + shedMetalNeed;
         houseMetal.text = metalHave + " / " + houseMetalNeed;
@@ -311,8 +317,10 @@ public class GameInventory : MonoBehaviour
 
     // build each structure
     public void BuildHut(){
-        Debug.Log("I built a hut!");
         hut.SetActive(true);
+        //shed.SetActive(false);
+        house.SetActive(false);
+        fort.SetActive(false);
 
         nailsHave -= hutNailsNeed;
         woodHave -= hutWoodNeed;
@@ -326,7 +334,10 @@ public class GameInventory : MonoBehaviour
 
     public void BuildShed(){
         Debug.Log("I built a shed!");
-        //actual hut visibility goes here
+        hut.SetActive(false);
+        // shed.SetActive(true);
+        house.SetActive(false);
+        fort.SetActive(false);
 
         nailsHave -= shedNailsNeed;
         woodHave -= shedWoodNeed;
@@ -339,8 +350,10 @@ public class GameInventory : MonoBehaviour
     }
 
     public void BuildHouse(){
-        Debug.Log("I built a house!");
+        hut.SetActive(false);
+        // shed.SetActive(false);
         house.SetActive(true);
+        fort.SetActive(false);
 
         nailsHave -= houseNailsNeed;
         woodHave -= houseWoodNeed;
@@ -353,8 +366,9 @@ public class GameInventory : MonoBehaviour
     }
 
     public void BuildFort(){
-        Debug.Log("I built a fort!");
-        //actual hut visibility goes here
+        hut.SetActive(false);
+        // shed.SetActive(false);
+        house.SetActive(false);
         fort.SetActive(true);
 
         nailsHave -= fortNailsNeed;
