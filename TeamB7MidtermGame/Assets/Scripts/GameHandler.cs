@@ -33,6 +33,7 @@ public class GameHandler : MonoBehaviour
             timerText.text = "" + Mathf.Floor(theTimer);
         } else {
             timerText.text = "0";
+            PlayerMovement.frozen = true;
             StartCoroutine(NaturalDisaster());
         }
     }

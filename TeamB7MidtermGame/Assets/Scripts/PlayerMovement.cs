@@ -10,9 +10,10 @@ public class PlayerMovement : MonoBehaviour {
     public float speed = 30f;
     public float turnSmoothTime =0.1f;
     private float turnSmoothVelocity;
+    public static bool frozen = false;
 
     void Start(){
-        //anim = gameObject.GetComponentInChildren<Animator>();
+        frozen = false;
         rb = gameObject.GetComponent<Rigidbody>();
 
         cam = GameObject.FindWithTag("MainCamera").GetComponent<Transform>();
@@ -21,7 +22,12 @@ public class PlayerMovement : MonoBehaviour {
     void Update () {
         float horiz = Input.GetAxisRaw("Horizontal");
         float vert = Input.GetAxisRaw("Vertical");
+
         Vector3 direct = new Vector3(horiz, 0f, vert).normalized;
+        if (frozen) {
+            direct = new Vector3(0f, 0f, 0f).normalized;
+        }
+        
 
         if (direct.magnitude >= 0.1f) {
             float targetAngle = Mathf.Atan2(direct.x, direct.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
