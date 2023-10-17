@@ -30,13 +30,7 @@ public class Display_and_decrease_playerhealth_when_collided_with_enemies_or_obj
             slider.value = health;                           
             text.text = "Health: " + health;
             if (health == 0) {
-                Debug.Log("You lose!");
-
-                #if UNITY_EDITOR
-                    UnityEditor.EditorApplication.isPlaying = false;
-                #else
-                    Application.Quit();
-                #endif
+                SceneManager.LoadScene("LoseScene");
             }
         }
                          
