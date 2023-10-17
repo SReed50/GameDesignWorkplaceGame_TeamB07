@@ -195,7 +195,7 @@ PrefabInstance:
       objectReference: {fileID: 1873208620}
     - target: {fileID: 4858674482892516072, guid: 5e9a35f546c674dac996d5796ef99df1, type: 3}
       propertyPath: speed
-      value: 100
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 5716466721474788644, guid: 5e9a35f546c674dac996d5796ef99df1, type: 3}
       propertyPath: hut
