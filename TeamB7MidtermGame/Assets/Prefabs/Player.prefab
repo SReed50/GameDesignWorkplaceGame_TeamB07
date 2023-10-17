@@ -131,8 +131,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuBuild: {fileID: 0}
   nailsHave: 0
+  nails: {fileID: 0}
   woodHave: 0
+  wood: {fileID: 0}
   metalHave: 0
+  metal: {fileID: 0}
   hut: {fileID: 0}
   buildHutButton: {fileID: 0}
   hutNails: {fileID: 0}
@@ -222,7 +225,9 @@ PrefabInstance:
       value: BOB
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: -4714817154256824709, guid: 2e4f13706f5c6ce4385d535df92bbaa3, type: 3}
+    - {fileID: 8821623529969584324, guid: 2e4f13706f5c6ce4385d535df92bbaa3, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2e4f13706f5c6ce4385d535df92bbaa3, type: 3}
