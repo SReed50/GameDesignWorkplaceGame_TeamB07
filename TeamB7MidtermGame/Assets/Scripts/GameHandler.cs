@@ -9,7 +9,7 @@ public class GameHandler : MonoBehaviour
 
     public float theTimer;
     public Text timerText;
-    public float startTime = 121;
+    private float startTime = 121;
 
     public bool isEnd = true;
     public GameObject tornado;

@@ -80,7 +80,7 @@ public class GameInventory : MonoBehaviour
         }
 
         hut.SetActive(false);
-        //shed.SetActive(false);
+        shed.SetActive(false);
         house.SetActive(false);
         fort.SetActive(false);
     }
@@ -91,12 +91,6 @@ public class GameInventory : MonoBehaviour
         if (Input.GetKeyDown("b")){
             ToggleBuildMenu();
         }
-
-        // Set text vars
-        // UpdateNailsText();
-        // UpdateWoodText();
-        // UpdateMetalText();
-        // only here temporarily until we have a way to pick up an object
     }
 
     public void ToggleBuildMenu(){
@@ -318,7 +312,7 @@ public class GameInventory : MonoBehaviour
     // build each structure
     public void BuildHut(){
         hut.SetActive(true);
-        //shed.SetActive(false);
+        shed.SetActive(false);
         house.SetActive(false);
         fort.SetActive(false);
 
@@ -335,7 +329,7 @@ public class GameInventory : MonoBehaviour
     public void BuildShed(){
         Debug.Log("I built a shed!");
         hut.SetActive(false);
-        // shed.SetActive(true);
+        shed.SetActive(true);
         house.SetActive(false);
         fort.SetActive(false);
 
@@ -351,7 +345,7 @@ public class GameInventory : MonoBehaviour
 
     public void BuildHouse(){
         hut.SetActive(false);
-        // shed.SetActive(false);
+        shed.SetActive(false);
         house.SetActive(true);
         fort.SetActive(false);
 
@@ -367,7 +361,7 @@ public class GameInventory : MonoBehaviour
 
     public void BuildFort(){
         hut.SetActive(false);
-        // shed.SetActive(false);
+        shed.SetActive(false);
         house.SetActive(false);
         fort.SetActive(true);
 
